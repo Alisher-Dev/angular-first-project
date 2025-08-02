@@ -1,0 +1,14 @@
+<div class="header">
+  <div class="container">
+    <span>
+      <img src="assets/Frame.png" alt="miro logo" />
+      <nav>
+        <a *ngFor="let navi of navigate" [href]="navi.to">{{ navi.title }}</a>
+      </nav>
+    </span>
+    <span>
+      <lucide-icon class="icon" name="earth"></lucide-icon>
+      <button>Регистрация</button>
+    </span>
+  </div>
+</div>
