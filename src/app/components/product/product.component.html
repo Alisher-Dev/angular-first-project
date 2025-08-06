@@ -1,0 +1,21 @@
+<div class="product">
+  <h1>Подходит для вашего стиля работы</h1>
+  <div>
+    <button
+      *ngFor="let btn of btns"
+      [ngClass]="btn.active ? 'active' : 'inactive'"
+      (click)="handleActive(btn.id)"
+    >
+      {{ btn.text }}
+    </button>
+  </div>
+  <div class="active-box">
+    <span class="active-title">
+      <p>{{ activeBtn.title }}</p>
+      <p>{{ activeBtn.desc }}</p>
+
+      <a href="#" class="link">Узнать больше</a>
+    </span>
+    <img [src]="activeBtn.banner" alt="banner-active" />
+  </div>
+</div>

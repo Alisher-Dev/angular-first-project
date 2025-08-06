@@ -1,0 +1,60 @@
+.main-about {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0 auto;
+}
+
+.left-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.left-box > h1 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 58px;
+}
+.left-box > p:nth-child(2) {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.left-box > p:nth-child(4) {
+  font-weight: 600;
+}
+
+span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+span > p {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.btn {
+  padding: 15px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 30px;
+  font-size: 18px;
+  border: none;
+  background-color: rgb(60, 60, 255);
+  color: white;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+.btn:hover {
+  background-color: rgb(48, 48, 255);
+  transform: scale(94%);
+}
+
+.right-box > img {
+  width: 600px;
+  height: 400px;
+}

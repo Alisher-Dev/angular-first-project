@@ -1,0 +1,36 @@
+.resource {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin: 120px auto 0;
+}
+
+.right-box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.right-box > h1 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 58px;
+}
+.right-box > p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(5, 0, 56, 0.6);
+}
+
+.link {
+  margin-top: 20px;
+  color: rgba(66, 98, 255, 1);
+  font-size: 18px;
+}
+
+.left-box > img {
+  width: 550px;
+  height: 420px;
+  object-fit: contain;
+}
