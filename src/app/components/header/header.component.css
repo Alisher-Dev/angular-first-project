@@ -7,6 +7,7 @@
   top: 0;
   left: 0;
   right: 0;
+  padding: 0 30px;
 }
 .container {
   display: flex;
@@ -16,17 +17,20 @@
   margin: 0 auto;
   padding: 20px 0;
 }
+
 .container > span:first-child {
   align-items: end;
 }
 .container > span:last-child {
   gap: 40px;
 }
+
 .container > span {
   display: flex;
   align-items: center;
   gap: 20px;
 }
+
 nav {
   display: flex;
   gap: 20px;
@@ -41,6 +45,7 @@ nav > a:hover {
   transform: translate(0, -15%);
   text-decoration: underline;
 }
+
 span > button {
   padding: 15px 25px;
   border-radius: 20px;
@@ -54,6 +59,32 @@ span > button:hover {
   background-color: rgb(48, 48, 255);
   transform: scale(94%);
 }
+
+.menu {
+  display: none;
+}
+
 .icon {
   cursor: pointer;
+}
+
+@media screen and (max-width: 850px) {
+  nav {
+    display: none;
+  }
+  .container > span:last-child {
+    display: none;
+  }
+  .logo {
+    width: 80px;
+    height: 30px;
+    object-fit: contain;
+  }
+  .menu {
+    display: block;
+  }
+  .container > span:first-child {
+    justify-content: space-between;
+    width: 100%;
+  }
 }

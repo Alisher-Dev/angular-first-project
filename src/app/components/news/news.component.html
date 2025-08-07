@@ -1,0 +1,18 @@
+<div class="news">
+  <h1>Нравится лучшим командам мира</h1>
+  <button>Все истории клиентов</button>
+
+  <div class="container">
+    <div *ngFor="let commnet of comments" class="comment">
+      <p>{{ commnet.title }}</p>
+      <p>{{ commnet.desc }}</p>
+      <div class="client">
+        <img [src]="commnet.avatar" alt="avatar" />
+        <span>
+          <p>{{ commnet.name }}</p>
+          <p>{{ commnet.position }}</p>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

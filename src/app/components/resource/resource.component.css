@@ -11,7 +11,7 @@
   flex-direction: column;
   gap: 30px;
 }
-.right-box > h1 {
+h1 {
   font-size: 48px;
   font-weight: 400;
   line-height: 58px;
@@ -30,7 +30,23 @@
 }
 
 .left-box > img {
-  width: 550px;
-  height: 420px;
+  max-width: 550px;
+  max-height: 420px;
   object-fit: contain;
+}
+
+@media screen and (max-width: 1200px) {
+  .resource {
+    flex-direction: column-reverse;
+    padding: 0 30px;
+    gap: 30px;
+  }
+  h1 {
+    font-size: 32px;
+    line-height: 34px;
+  }
+  .left-box > img {
+    width: 100%;
+    padding: 0 30px;
+  }
 }

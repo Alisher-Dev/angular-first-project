@@ -18,3 +18,18 @@ export interface IButtonActive {
   link: string;
   banner: string;
 }
+
+//trust content
+export interface IContentTrust {
+  title: string;
+  desc: string;
+}
+
+//news commnet
+export interface IComment {
+  title: string;
+  desc: string;
+  avatar: string;
+  name: string;
+  position: string;
+}

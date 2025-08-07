@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IButtonActive, IButtonList } from '../../types/type';
 import { CommonModule } from '@angular/common';
 
@@ -12,89 +12,85 @@ export class ProductComponent {
   btns: IButtonList[] = [
     {
       id: 1,
-      text: 'Мозговые штурмы',
+      text: 'Frontend',
       active: true,
       prod: {
-        title: 'Как проводить мозговые штурмы',
-        desc: 'Эффективные техники генерации идей в команде.',
-        link: 'https://example.com/brainstorming',
+        title: 'Современный Frontend',
+        desc: 'Разработка клиентской части сайтов и приложений с использованием HTML, CSS, JavaScript, а также популярных фреймворков вроде React, Vue или Angular. Включает в себя адаптивную верстку, работу с API и создание интерактивных интерфейсов.',
+        link: 'https://example.com/frontend',
         banner:
-          'https://neiros.ru/img/brainstorm/pravila-mozgovogo-shturma.png',
+          'https://img.freepik.com/premium-vector/frontend-developer-web-banner-landing-page_277904-9968.jpg?semt=ais_hybrid&w=740&q=80',
       },
     },
     {
       id: 2,
-      text: 'Диаграммы',
+      text: 'Backend',
       active: false,
       prod: {
-        title: 'Создание диаграмм',
-        desc: 'Визуализируй процессы и данные с помощью диаграмм.',
-        link: 'https://example.com/diagrams',
-        banner: 'https://example.com/images/diagrams.jpg',
+        title: 'Надежный Backend',
+        desc: 'Серверная часть приложений, отвечающая за логику, базу данных и безопасность. Языки: Node.js, Python, PHP, Java, Go. Важны REST/GraphQL API, работа с БД (PostgreSQL, MongoDB), авторизация и масштабируемость.',
+        link: 'https://example.com/backend',
+        banner:
+          'https://thumbs.dreamstime.com/b/backend-development-coding-software-engineering-programming-languages-program-code-laptop-screen-website-template-technology-155406269.jpg',
       },
     },
     {
       id: 3,
-      text: 'Встречи',
+      text: 'DevOps',
       active: false,
       prod: {
-        title: 'Организация встреч',
-        desc: 'Как проводить встречи продуктивно и по делу.',
-        link: 'https://example.com/meetings',
-        banner: 'https://example.com/images/meetings.jpg',
+        title: 'Инфраструктура и DevOps',
+        desc: 'DevOps объединяет разработку и эксплуатацию. Используются CI/CD, Docker, Kubernetes, облачные решения (AWS, GCP, Azure) и мониторинг (Prometheus, Grafana). Основная цель — автоматизация и стабильность релизов.',
+        link: 'https://example.com/devops',
+        banner:
+          'https://www.spec-india.com/wp-content/uploads/2022/11/Banner-Devops.png',
       },
     },
     {
       id: 4,
-      text: 'SCRUM',
+      text: 'Тестирование',
       active: false,
       prod: {
-        title: 'SCRUM для команды',
-        desc: 'Гибкий подход к управлению проектами и задачами.',
-        link: 'https://example.com/scrum',
-        banner: 'https://example.com/images/scrum.jpg',
+        title: 'Автоматизация тестов',
+        desc: 'Тестирование гарантирует качество продукта. Включает юнит-тесты, интеграционные, e2e. Популярные инструменты: Jest, Cypress, Playwright, Selenium. Это помогает находить баги на ранних этапах и сохранять стабильность.',
+        link: 'https://example.com/testing',
+        banner: 'https://neiros.ru/img/testing/chto-takoe-testirovanie.jpg',
       },
     },
     {
       id: 5,
-      text: 'Картирование',
+      text: 'UI/UX Дизайн',
       active: false,
       prod: {
-        title: 'Картирование процессов',
-        desc: 'Анализируй и улучшай бизнес-процессы с помощью карт.',
-        link: 'https://example.com/mapping',
-        banner: 'https://example.com/images/mapping.jpg',
-      },
-    },
-    {
-      id: 6,
-      text: 'Дизайн-исследования',
-      active: false,
-      prod: {
-        title: 'Дизайн-исследования в UX',
-        desc: 'Понимай своих пользователей через исследования.',
-        link: 'https://example.com/ux-research',
-        banner: 'https://example.com/images/research.jpg',
-      },
-    },
-    {
-      id: 7,
-      text: 'Планирование',
-      active: false,
-      prod: {
-        title: 'Планирование проекта',
-        desc: 'Ставь цели, сроки и ресурсы — планируй как профи.',
-        link: 'https://example.com/planning',
-        banner: 'https://example.com/images/planning.jpg',
+        title: 'Дизайн интерфейсов и опыт',
+        desc: 'Создание удобных и визуально привлекательных интерфейсов. Используются инструменты: Figma, Adobe XD, Sketch. UX включает исследование пользователей, прототипирование и тестирование. Цель — сделать продукт интуитивно понятным.',
+        link: 'https://example.com/uiux',
+        banner:
+          'https://img.freepik.com/free-vector/flat-design-ui-ux-background_23-2149093995.jpg',
       },
     },
   ];
 
   activeBtn: IButtonActive = { ...this.btns[0].prod };
+  isLoadingImg = false;
+
+  handleImgStatus() {
+    this.isLoadingImg = false;
+  }
 
   handleActive(btnId: number) {
     this.btns.map((btn) =>
       btn.id === btnId ? (btn.active = true) : (btn.active = false)
     );
+
+    if (
+      this.activeBtn.banner !==
+      this.btns.find((btn) => btn.id === btnId)?.prod.banner
+    ) {
+      this.isLoadingImg = true;
+    }
+
+    this.activeBtn =
+      this.btns.find((btn) => btn.id === btnId)?.prod ?? this.btns[0].prod;
   }
 }

@@ -1,6 +1,6 @@
 <div class="product">
   <h1>Подходит для вашего стиля работы</h1>
-  <div>
+  <div class="box-btn">
     <button
       *ngFor="let btn of btns"
       [ngClass]="btn.active ? 'active' : 'inactive'"
@@ -9,6 +9,7 @@
       {{ btn.text }}
     </button>
   </div>
+
   <div class="active-box">
     <span class="active-title">
       <p>{{ activeBtn.title }}</p>
@@ -16,6 +17,16 @@
 
       <a href="#" class="link">Узнать больше</a>
     </span>
-    <img [src]="activeBtn.banner" alt="banner-active" />
+    <div class="banner">
+      <div *ngIf="isLoadingImg" class="spinner">
+        <p>Загрузка изображения...</p>
+      </div>
+      <img
+        [src]="activeBtn.banner"
+        alt="banner-active"
+        loading="lazy"
+        (load)="handleImgStatus()"
+      />
+    </div>
   </div>
 </div>

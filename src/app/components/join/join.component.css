@@ -1,0 +1,53 @@
+.join {
+  margin: 120px 0 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  padding: 120px 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 20px;
+  background-color: rgb(5, 0, 56);
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 58px;
+  text-align: center;
+}
+p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
+}
+span {
+  text-decoration: underline;
+}
+
+button {
+  padding: 15px 30px;
+  color: white;
+  background-color: rgb(66, 98, 255);
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  border-radius: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  .join {
+    padding: 0 30px;
+  }
+  .container {
+    padding: 60px;
+  }
+  h1 {
+    font-size: 32px;
+    line-height: 34px;
+  }
+}

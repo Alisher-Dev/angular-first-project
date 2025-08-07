@@ -1,0 +1,90 @@
+.news {
+  max-width: 1200px;
+  margin: 120px auto 0;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 58px;
+  text-align: center;
+}
+button {
+  color: rgba(66, 98, 255, 1);
+  background-color: transparent;
+  border: 1px solid rgba(66, 98, 255, 1);
+  padding: 15px 40px;
+  border-radius: 30px;
+  margin: 20px auto 0;
+  font-size: 18px;
+  display: block;
+}
+
+.container {
+  display: grid;
+  margin-top: 100px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 5px rgb(209, 209, 209);
+  border-radius: 10px;
+  padding: 20px 15px;
+  gap: 40px;
+}
+.comment > p:first-child {
+  font-size: 30px;
+  font-weight: 600;
+}
+.comment > p:nth-child(2) {
+  font-size: 18px;
+  font-weight: 500px;
+  line-height: 24px;
+  height: 160px;
+  overflow: auto;
+  color: rgba(5, 0, 56, 0.6);
+}
+
+.client {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.client > span {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.client > span > p {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(5, 0, 56, 0.6);
+}
+.client > img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+  .news {
+    padding: 0 30px;
+  }
+  .comment {
+    gap: 30px;
+  }
+  .client > img {
+    width: 45px;
+    height: 45px;
+  }
+  h1 {
+    font-size: 32px;
+    line-height: 34px;
+  }
+  button {
+    font-size: 16px;
+  }
+}
