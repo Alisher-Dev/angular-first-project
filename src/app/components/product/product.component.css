@@ -126,3 +126,32 @@ button {
     line-height: 34px;
   }
 }
+
+@media screen and (max-width: 430px) {
+  .product {
+    padding: 60px 10px 0;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .active-title > p {
+    font-size: 14px;
+  }
+  .active-title > p:first-child {
+    font-size: 18px;
+  }
+  .link {
+    font-size: 14px;
+  }
+  .banner {
+    max-height: 220px;
+  }
+  .spinner {
+    font-size: 14px;
+  }
+}

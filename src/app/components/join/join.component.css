@@ -51,3 +51,23 @@ button {
     line-height: 34px;
   }
 }
+
+@media screen and (max-width: 430px) {
+  .join {
+    padding: 60px 10px 0;
+  }
+  .container {
+    padding: 60px;
+  }
+  h1 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+  p {
+    font-size: 14px;
+  }
+  button {
+    padding: 10px 30px;
+    font-size: 14px;
+  }
+}

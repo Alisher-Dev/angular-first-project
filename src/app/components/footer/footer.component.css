@@ -81,3 +81,9 @@
   margin-right: 20px;
   width: 150px;
 }
+
+@media screen and (max-width: 430px) {
+  .footer {
+    margin-top: 60px;
+  }
+}

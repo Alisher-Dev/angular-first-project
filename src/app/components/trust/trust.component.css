@@ -52,3 +52,28 @@ span > p:last-child {
     line-height: 34px;
   }
 }
+
+@media screen and (max-width: 430px) {
+  .container {
+    padding: 0 10px;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  .container > p {
+    font-size: 14px;
+  }
+
+  span {
+    padding: 0;
+  }
+  span > p:first-child {
+    font-size: 30px;
+  }
+  span > p:last-child {
+    font-size: 14px;
+  }
+  .grid-content {
+    gap: 40px;
+  }
+}

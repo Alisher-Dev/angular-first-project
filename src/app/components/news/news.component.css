@@ -88,3 +88,42 @@ button {
     font-size: 16px;
   }
 }
+
+@media screen and (max-width: 430px) {
+  .news {
+    padding: 0 10px;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  .container {
+    margin-top: 60px;
+  }
+  .container > p {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 30px;
+  }
+
+  .comment > p:first-child {
+    font-size: 20px;
+  }
+  .comment > p:nth-child(2) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .comment {
+    gap: 10px;
+  }
+
+  .client > img {
+    width: 40px;
+    height: 40px;
+  }
+  .client > span > p {
+    font-size: 14px;
+  }
+}

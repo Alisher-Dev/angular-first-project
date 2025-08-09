@@ -82,3 +82,28 @@ span > p {
     padding: 0 30px;
   }
 }
+
+@media screen and (max-width: 430px) {
+  .left-box {
+    padding: 0 10px;
+  }
+  .btn {
+    width: 100%;
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  .left-box > p:nth-child(2) {
+    font-size: 14px;
+  }
+  .left-box > p:nth-child(4) {
+    font-size: 14px;
+  }
+  span > p {
+    font-size: 14px;
+  }
+  .right-box > img {
+    max-height: 220px;
+  }
+}
