@@ -1,32 +1,34 @@
-<div class="product">
-  <h1>Подходит для вашего стиля работы</h1>
-  <div class="box-btn">
-    <button
-      *ngFor="let btn of btns"
-      [ngClass]="btn.active ? 'active' : 'inactive'"
-      (click)="handleActive(btn.id)"
-    >
-      {{ btn.text }}
-    </button>
-  </div>
+<div class="product" id="product">
+  <div class="container">
+    <h1>Подходит для вашего стиля работы</h1>
+    <div class="box-btn">
+      <button
+        *ngFor="let btn of btns"
+        [ngClass]="btn.active ? 'active' : 'inactive'"
+        (click)="handleActive(btn.id)"
+      >
+        {{ btn.text }}
+      </button>
+    </div>
 
-  <div class="active-box">
-    <span class="active-title">
-      <p>{{ activeBtn.title }}</p>
-      <p>{{ activeBtn.desc }}</p>
+    <div class="active-box">
+      <span class="active-title">
+        <p>{{ activeBtn.title }}</p>
+        <p>{{ activeBtn.desc }}</p>
 
-      <a href="#" class="link">Узнать больше</a>
-    </span>
-    <div class="banner">
-      <div *ngIf="isLoadingImg" class="spinner">
-        <p>Загрузка изображения...</p>
+        <a href="#" class="link">Узнать больше</a>
+      </span>
+      <div class="banner">
+        <div *ngIf="isLoadingImg" class="spinner">
+          <p>Загрузка изображения...</p>
+        </div>
+        <img
+          [src]="activeBtn.banner"
+          alt="banner-active"
+          loading="lazy"
+          (load)="handleImgStatus()"
+        />
       </div>
-      <img
-        [src]="activeBtn.banner"
-        alt="banner-active"
-        loading="lazy"
-        (load)="handleImgStatus()"
-      />
     </div>
   </div>
 </div>
