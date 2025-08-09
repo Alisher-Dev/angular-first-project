@@ -40,7 +40,7 @@ h1 {
 }
 
 @media screen and (max-width: 1200px) {
-  .solution {
+  .container {
     flex-direction: column;
     padding: 0 30px;
     gap: 30px;
